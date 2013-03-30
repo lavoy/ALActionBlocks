@@ -19,6 +19,7 @@
 		A1AE07DA170741AC0028A95E /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AE07D9170741AC0028A95E /* ALViewController.m */; };
 		A1AE07DD170741AC0028A95E /* ALViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07DB170741AC0028A95E /* ALViewController_iPhone.xib */; };
 		A1AE07E0170741AC0028A95E /* ALViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07DE170741AC0028A95E /* ALViewController_iPad.xib */; };
+		A1AE07E8170742300028A95E /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AE07E7170742300028A95E /* UIControl+ALActionBlocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		A1AE07D9170741AC0028A95E /* ALViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
 		A1AE07DC170741AC0028A95E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ALViewController_iPhone.xib; sourceTree = "<group>"; };
 		A1AE07DF170741AC0028A95E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ALViewController_iPad.xib; sourceTree = "<group>"; };
+		A1AE07E6170742300028A95E /* UIControl+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIControl+ALActionBlocks.h"; path = "../../ALActionBlocks/UIControl+ALActionBlocks.h"; sourceTree = "<group>"; };
+		A1AE07E7170742300028A95E /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIControl+ALActionBlocks.m"; path = "../../ALActionBlocks/UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				A1AE07D9170741AC0028A95E /* ALViewController.m */,
 				A1AE07DB170741AC0028A95E /* ALViewController_iPhone.xib */,
 				A1AE07DE170741AC0028A95E /* ALViewController_iPad.xib */,
+				A1AE07E6170742300028A95E /* UIControl+ALActionBlocks.h */,
+				A1AE07E7170742300028A95E /* UIControl+ALActionBlocks.m */,
 				A1AE07C7170741AC0028A95E /* Supporting Files */,
 			);
 			path = ALActionBlocks;
@@ -181,6 +186,7 @@
 				A1AE07CD170741AC0028A95E /* main.m in Sources */,
 				A1AE07D1170741AC0028A95E /* ALAppDelegate.m in Sources */,
 				A1AE07DA170741AC0028A95E /* ALViewController.m in Sources */,
+				A1AE07E8170742300028A95E /* UIControl+ALActionBlocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +319,7 @@
 				A1AE07E5170741AC0028A95E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
