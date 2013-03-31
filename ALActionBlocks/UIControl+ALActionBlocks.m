@@ -12,6 +12,7 @@
 @interface ALActionBlockWrapper : NSObject
 
 @property (nonatomic, copy) ActionBlock actionBlock;
+@property (nonatomic, assign) UIControlEvents controlEvents;
 
 - (void)invokeBlock:(id)sender;
 
@@ -33,18 +34,47 @@
 
 static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
 
-- (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ActionBlock)actionBlock {
-    NSMutableArray *blockActionsArray = objc_getAssociatedObject(self, &ALActionBlocksArray);
-    if (!blockActionsArray) {
-        blockActionsArray = [NSMutableArray array];
-        objc_setAssociatedObject(self, &ALActionBlocksArray, blockActionsArray, OBJC_ASSOCIATION_RETAIN);
+
+- (NSMutableArray *)actionBlocksArray {
+    NSMutableArray *actionBlocksArray = objc_getAssociatedObject(self, &ALActionBlocksArray);
+    if (!actionBlocksArray) {
+        actionBlocksArray = [NSMutableArray array];
+        [self setActionBlocksArray:actionBlocksArray];
     }
+    return actionBlocksArray;
+}
+
+
+- (void)setActionBlocksArray:(NSMutableArray *)actionBlocksArray {
+    objc_setAssociatedObject(self, &ALActionBlocksArray, actionBlocksArray, OBJC_ASSOCIATION_RETAIN);
+}
+
+
+- (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ActionBlock)actionBlock {
+    NSMutableArray *actionBlocksArray = [self actionBlocksArray];
     
     ALActionBlockWrapper *blockActionWrapper = [[ALActionBlockWrapper alloc] init];
-    [blockActionWrapper setActionBlock:actionBlock];
-    [blockActionsArray addObject:blockActionWrapper];
+    blockActionWrapper.actionBlock = actionBlock;
+    blockActionWrapper.controlEvents = controlEvents;
+    [actionBlocksArray addObject:blockActionWrapper];
     
     [self addTarget:blockActionWrapper action:@selector(invokeBlock:) forControlEvents:controlEvents];
 }
+
+
+- (void)removeActionBlocksForControlEvents:(UIControlEvents)controlEvents {
+    NSMutableArray *actionBlocksArray = [self actionBlocksArray];
+    NSMutableArray *wrappersToRemove = [NSMutableArray arrayWithCapacity:[actionBlocksArray count]];
+    
+    for (ALActionBlockWrapper *wrapperTmp in [self actionBlocksArray]) {
+        if (wrapperTmp.controlEvents == controlEvents) {
+            [wrappersToRemove addObject:wrapperTmp];
+            [self removeTarget:wrapperTmp action:@selector(invokeBlock:) forControlEvents:controlEvents];
+        }
+    }
+    
+    [actionBlocksArray removeObjectsInArray:wrappersToRemove];
+}
+
 
 @end

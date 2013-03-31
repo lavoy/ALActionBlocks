@@ -13,5 +13,6 @@ typedef void (^ActionBlock)(id sender);
 @interface UIControl (ALActionBlocks)
 
 - (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ActionBlock)actionBlock;
+- (void)removeActionBlocksForControlEvents:(UIControlEvents)controlEvents;
 
 @end
