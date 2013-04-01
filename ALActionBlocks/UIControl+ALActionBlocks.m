@@ -61,12 +61,13 @@ static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
     NSMutableArray *actionBlocksArray = [self actionBlocksArray];
     NSMutableArray *wrappersToRemove = [NSMutableArray arrayWithCapacity:[actionBlocksArray count]];
     
-    for (ALActionBlockWrapper *wrapperTmp in [self actionBlocksArray]) {
+    [actionBlocksArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ALActionBlockWrapper *wrapperTmp = obj;
         if (wrapperTmp.controlEvents == controlEvents) {
             [wrappersToRemove addObject:wrapperTmp];
             [self removeTarget:wrapperTmp action:@selector(invokeBlock) forControlEvents:controlEvents];
         }
-    }
+    }];
     
     [actionBlocksArray removeObjectsInArray:wrappersToRemove];
 }
