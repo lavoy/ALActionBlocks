@@ -39,14 +39,9 @@ static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
     NSMutableArray *actionBlocksArray = objc_getAssociatedObject(self, &ALActionBlocksArray);
     if (!actionBlocksArray) {
         actionBlocksArray = [NSMutableArray array];
-        [self setActionBlocksArray:actionBlocksArray];
+        objc_setAssociatedObject(self, &ALActionBlocksArray, actionBlocksArray, OBJC_ASSOCIATION_RETAIN);
     }
     return actionBlocksArray;
-}
-
-
-- (void)setActionBlocksArray:(NSMutableArray *)actionBlocksArray {
-    objc_setAssociatedObject(self, &ALActionBlocksArray, actionBlocksArray, OBJC_ASSOCIATION_RETAIN);
 }
 
 
