@@ -6,7 +6,7 @@ ALActionBlocks is an Objective-C category on UIControl that allows for handling 
 - Remove blocks for control events
 - Works with all of your existing subclasses of UIControl
 
-This category was inspired by [Dave Delong] (https://github.com/davedelong)'s StackOverflow [answer] (http://stackoverflow.com/a/4582061/315074).
+This category was inspired by [Dave DeLong] (https://github.com/davedelong)'s StackOverflow [answer] (http://stackoverflow.com/a/4582061/315074).
 
 #### Adding blocks
 
