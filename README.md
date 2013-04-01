@@ -27,3 +27,12 @@ That's it!
 
 
 *Check out the demo project for more details.*
+
+### Creator
+
+[Andy LaVoy](http://github.com/lavoy)  
+[@lavoy](https://twitter.com/lavoy)
+
+## License
+
+ALActionBlocks is available under the MIT license. See the LICENSE file for more info.
