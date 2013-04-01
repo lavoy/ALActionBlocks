@@ -14,15 +14,15 @@
 @property (nonatomic, copy) ActionBlock actionBlock;
 @property (nonatomic, assign) UIControlEvents controlEvents;
 
-- (void)invokeBlock:(id)sender;
+- (void)invokeBlock;
 
 @end
 
 @implementation ALActionBlockWrapper
 
-- (void)invokeBlock:(id)sender {
+- (void)invokeBlock {
     if (self.actionBlock) {
-        self.actionBlock(sender);
+        self.actionBlock();
     }
 }
 
@@ -58,7 +58,7 @@ static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
     blockActionWrapper.controlEvents = controlEvents;
     [actionBlocksArray addObject:blockActionWrapper];
     
-    [self addTarget:blockActionWrapper action:@selector(invokeBlock:) forControlEvents:controlEvents];
+    [self addTarget:blockActionWrapper action:@selector(invokeBlock) forControlEvents:controlEvents];
 }
 
 
@@ -69,7 +69,7 @@ static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
     for (ALActionBlockWrapper *wrapperTmp in [self actionBlocksArray]) {
         if (wrapperTmp.controlEvents == controlEvents) {
             [wrappersToRemove addObject:wrapperTmp];
-            [self removeTarget:wrapperTmp action:@selector(invokeBlock:) forControlEvents:controlEvents];
+            [self removeTarget:wrapperTmp action:@selector(invokeBlock) forControlEvents:controlEvents];
         }
     }
     
