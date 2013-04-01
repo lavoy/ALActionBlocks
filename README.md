@@ -8,7 +8,7 @@ ALActionBlocks is an Objective-C category on UIControl that allows for handling 
 
 This category was inspired by [Dave Delong] (https://github.com/davedelong)'s StackOverflow [answer] (http://stackoverflow.com/a/4582061/315074).
 
-##### Adding blocks
+#### Adding blocks
 
 ```objc
 // Assuming you have a UIButton named 'button'
@@ -17,7 +17,7 @@ This category was inspired by [Dave Delong] (https://github.com/davedelong)'s St
 }];
 ```
 
-##### Removing Blocks
+#### Removing Blocks
 
 ```objc
 [button removeActionBlocksForControlEvents:UIControlEventTouchUpInside];
@@ -28,11 +28,20 @@ That's it!
 
 *Check out the demo project for more details.*
 
+
+#### Requirements
+
+ALActionBlocks requires [iOS 5.0](http://developer.apple.com/library/ios/#releasenotes/General/WhatsNewIniOS/Articles/iOS5.html) and above.
+
+### ARC
+
+Yuuuup!
+
 ### Creator
 
 [Andy LaVoy](http://github.com/lavoy)  
 [@lavoy](https://twitter.com/lavoy)
 
-## License
+### License
 
 ALActionBlocks is available under the MIT license. See the LICENSE file for more info.
