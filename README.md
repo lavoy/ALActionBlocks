@@ -20,7 +20,7 @@ This category was inspired by [Dave Delong] (https://github.com/davedelong)'s St
 ##### Removing Blocks
 
 ```objc
-[button removeActionBlocksForControlEvents:handleControlEvents:UIControlEventTouchUpInside];
+[button removeActionBlocksForControlEvents:UIControlEventTouchUpInside];
 ```
 
 That's it!
