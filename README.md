@@ -44,4 +44,4 @@ Yuuuup!
 
 ### License
 
-ALActionBlocks is available under the MIT license. See the LICENSE file for more info.
+ALActionBlocks is available under the [MIT license] (http://opensource.org/licenses/MIT).
