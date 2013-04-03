@@ -13,7 +13,7 @@ This category was inspired by [Dave DeLong] (https://github.com/davedelong)'s St
 ```objc
 // Assuming you have a UIButton named 'button'
 [button handleControlEvents:UIControlEventTouchUpInside withBlock:^() {
-    NSLog(@"buttton pressed: %@", [button titleForState:UIControlStateNormal]);
+    NSLog(@"button pressed: %@", [button titleForState:UIControlStateNormal]);
 }];
 ```
 
