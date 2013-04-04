@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^ActionBlock)(id weakSender);
+typedef void (^ActionBlock)(id weakControl);
 
 @interface UIControl (ALActionBlocks)
 
