@@ -11,6 +11,8 @@
 
 @interface ALViewController ()
 
+@property (nonatomic, strong) UIButton *button;
+
 @end
 
 @implementation ALViewController
@@ -18,16 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(60, 44, 200, 44);
-    [button setTitle:@"Start" forState:UIControlStateNormal];
-    [button handleControlEvents:UIControlEventTouchUpInside withBlock:^() {
-        NSLog(@"buttton pressed: %@", [button titleForState:UIControlStateNormal]);
+    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.button.frame = CGRectMake(60, 44, 200, 44);
+    [self.button setTitle:@"Start" forState:UIControlStateNormal];
+    [self.button handleControlEvents:UIControlEventTouchUpInside withBlock:^(UIButton *weakButton) {
+        NSLog(@"buttton pressed: %@", [weakButton titleForState:UIControlStateNormal]);
     }];
-    [self.view addSubview:button];
+    [self.view addSubview:self.button];
     
     UISwitch *aSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(120, 132, 0, 0)];
-    [aSwitch handleControlEvents:UIControlEventValueChanged withBlock:^() {
+    [aSwitch handleControlEvents:UIControlEventValueChanged withBlock:^(id weakSender) {
         NSLog(@"value: %d", aSwitch.isOn);
     }];
     [self.view addSubview:aSwitch];
@@ -35,7 +37,7 @@
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"One", @"Two", @"Three"]];
     segmentedControl.frame = CGRectMake(88, 220, 143, 30);
     segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
-    [segmentedControl handleControlEvents:UIControlEventValueChanged withBlock:^() {
+    [segmentedControl handleControlEvents:UIControlEventValueChanged withBlock:^(id weakSender) {
         NSLog(@"selected segment: %@", [segmentedControl titleForSegmentAtIndex:segmentedControl.selectedSegmentIndex]);
         if (segmentedControl.selectedSegmentIndex == 2) {
             NSLog(@"removing action block");
