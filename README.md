@@ -21,7 +21,7 @@ This category was inspired by [Dave DeLong] (https://github.com/davedelong)'s St
 #### Retain Cycle Avoidance Example
 
 ```objc
-// Assuming you have a strong property to a UIButton named 'button'
+// Assuming you have a property to a UIButton named 'button'
 [self.button handleControlEvents:UIControlEventTouchUpInside withBlock:^(UIButton *weakButton) {
     NSLog(@"button pressed: %@", [weakButton titleForState:UIControlStateNormal]);
 }];
