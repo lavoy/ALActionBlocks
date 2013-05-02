@@ -11,7 +11,7 @@
 
 @interface ALActionBlockWrapper : NSObject
 
-@property (nonatomic, copy) ActionBlock actionBlock;
+@property (nonatomic, copy) ALActionBlock actionBlock;
 @property (nonatomic, assign) UIControlEvents controlEvents;
 
 - (void)invokeBlock:(id)sender;
@@ -45,7 +45,7 @@ static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
 }
 
 
-- (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ActionBlock)actionBlock {
+- (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ALActionBlock)actionBlock {
     NSMutableArray *actionBlocksArray = [self actionBlocksArray];
     
     ALActionBlockWrapper *blockActionWrapper = [[ALActionBlockWrapper alloc] init];

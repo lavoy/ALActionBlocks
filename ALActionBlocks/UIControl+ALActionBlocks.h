@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^ActionBlock)(id weakControl);
+typedef void (^ALActionBlock)(id weakControl);
 
 @interface UIControl (ALActionBlocks)
 
-- (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ActionBlock)actionBlock;
+- (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ALActionBlock)actionBlock;
 - (void)removeActionBlocksForControlEvents:(UIControlEvents)controlEvents;
 
 @end

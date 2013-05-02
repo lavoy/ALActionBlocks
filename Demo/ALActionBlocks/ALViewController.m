@@ -7,7 +7,7 @@
 //
 
 #import "ALViewController.h"
-#import "UIControl+ALActionBlocks.h"
+#import "ALActionBlocks.h"
 
 @interface ALViewController ()
 
