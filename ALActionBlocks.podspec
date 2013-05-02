@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage      = "https://github.com/lavoy/ALActionBlocks"
   s.license       = { :type => "MIT", :file => 'LICENSE' }
   s.author        = { "Andy LaVoy" => "andy@logcabinapps.com" }
-  s.source        = { :git => "https://github.com/lavoy/ALActionBlocks.git", :tag => "1.0" }
+  s.source        = { :git => "https://github.com/lavoy/ALActionBlocks.git", :tag => "1.0.1" }
   s.platform      = :ios, '5.0'
   s.source_files  = 'ALActionBlocks', 'ALActionBlocks/*.{h,m}'
   s.framework     = 'Foundation'
