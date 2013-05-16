@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10AE4821745784800EEC209 /* UIBarButtonItem+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A10AE4811745784800EEC209 /* UIBarButtonItem+ALActionBlocks.m */; };
+		A10AE48B17457FCB00EEC209 /* ALActionBlockWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A10AE48A17457FCB00EEC209 /* ALActionBlockWrapper.m */; };
 		A1AE07C1170741AC0028A95E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AE07C0170741AC0028A95E /* UIKit.framework */; };
 		A1AE07C3170741AC0028A95E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AE07C2170741AC0028A95E /* Foundation.framework */; };
 		A1AE07C5170741AC0028A95E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AE07C4170741AC0028A95E /* CoreGraphics.framework */; };
@@ -21,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10AE4801745784800EEC209 /* UIBarButtonItem+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ALActionBlocks.h"; sourceTree = "<group>"; };
+		A10AE4811745784800EEC209 /* UIBarButtonItem+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ALActionBlocks.m"; sourceTree = "<group>"; };
+		A10AE48617457EFC00EEC209 /* ALActionBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlock.h; sourceTree = "<group>"; };
+		A10AE48917457FCB00EEC209 /* ALActionBlockWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlockWrapper.h; sourceTree = "<group>"; };
+		A10AE48A17457FCB00EEC209 /* ALActionBlockWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALActionBlockWrapper.m; sourceTree = "<group>"; };
 		A1AE07BD170741AC0028A95E /* ALActionBlocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALActionBlocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AE07C0170741AC0028A95E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A1AE07C2170741AC0028A95E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +120,11 @@
 			isa = PBXGroup;
 			children = (
 				A1F120D21733052200363A8F /* ALActionBlocks.h */,
+				A10AE48617457EFC00EEC209 /* ALActionBlock.h */,
+				A10AE48917457FCB00EEC209 /* ALActionBlockWrapper.h */,
+				A10AE48A17457FCB00EEC209 /* ALActionBlockWrapper.m */,
+				A10AE4801745784800EEC209 /* UIBarButtonItem+ALActionBlocks.h */,
+				A10AE4811745784800EEC209 /* UIBarButtonItem+ALActionBlocks.m */,
 				A1F120CF1733050400363A8F /* UIControl+ALActionBlocks.h */,
 				A1F120D01733050400363A8F /* UIControl+ALActionBlocks.m */,
 			);
@@ -190,6 +202,8 @@
 				A1AE07D1170741AC0028A95E /* ALAppDelegate.m in Sources */,
 				A1AE07DA170741AC0028A95E /* ALViewController.m in Sources */,
 				A1F120D11733050400363A8F /* UIControl+ALActionBlocks.m in Sources */,
+				A10AE4821745784800EEC209 /* UIBarButtonItem+ALActionBlocks.m in Sources */,
+				A10AE48B17457FCB00EEC209 /* ALActionBlockWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

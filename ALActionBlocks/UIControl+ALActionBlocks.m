@@ -7,43 +7,13 @@
 //
 
 #import "UIControl+ALActionBlocks.h"
+#import "ALActionBlockWrapper.h"
 #import <objc/runtime.h>
-
-@interface ALActionBlockWrapper : NSObject
-
-@property (nonatomic, copy) ALActionBlock actionBlock;
-@property (nonatomic, assign) UIControlEvents controlEvents;
-
-- (void)invokeBlock:(id)sender;
-
-@end
-
-@implementation ALActionBlockWrapper
-
-- (void)invokeBlock:(id)sender {
-    if (self.actionBlock) {
-        self.actionBlock(sender);
-    }
-}
-
-
-@end
 
 
 @implementation UIControl (ALActionBlocks)
 
 static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
-
-
-- (NSMutableArray *)actionBlocksArray {
-    NSMutableArray *actionBlocksArray = objc_getAssociatedObject(self, &ALActionBlocksArray);
-    if (!actionBlocksArray) {
-        actionBlocksArray = [NSMutableArray array];
-        objc_setAssociatedObject(self, &ALActionBlocksArray, actionBlocksArray, OBJC_ASSOCIATION_RETAIN);
-    }
-    return actionBlocksArray;
-}
-
 
 - (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ALActionBlock)actionBlock {
     NSMutableArray *actionBlocksArray = [self actionBlocksArray];
@@ -70,6 +40,16 @@ static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
     }];
     
     [actionBlocksArray removeObjectsInArray:wrappersToRemove];
+}
+
+
+- (NSMutableArray *)actionBlocksArray {
+    NSMutableArray *actionBlocksArray = objc_getAssociatedObject(self, &ALActionBlocksArray);
+    if (!actionBlocksArray) {
+        actionBlocksArray = [NSMutableArray array];
+        objc_setAssociatedObject(self, &ALActionBlocksArray, actionBlocksArray, OBJC_ASSOCIATION_RETAIN);
+    }
+    return actionBlocksArray;
 }
 
 

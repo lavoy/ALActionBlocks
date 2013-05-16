@@ -49,8 +49,22 @@
     }];
     [self.view addSubview:segmentedControl];
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Boom!" style:UIBarButtonItemStyleDone block:^(UIBarButtonItem *weakButton) {
+        NSLog(@"%@", [NSString stringWithFormat:@"%@", weakButton.title]);
+    }];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd block:^(id weakSender) {
+        NSLog(@"add");
+    }];
     
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 88, self.view.frame.size.width, 44)];
+    [self.view addSubview:toolbar];
+    
+    UIBarButtonItem *powButton = [[UIBarButtonItem alloc] init];
+    [powButton setTitle:@"Pow!"];
+    [powButton setBlock:^(id weakSender) {
+        NSLog(@"pow!");
+    }];
+    [toolbar setItems:@[powButton]];
 }
-
 
 @end

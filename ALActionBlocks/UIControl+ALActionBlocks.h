@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef void (^ALActionBlock)(id weakControl);
+#import "ALActionBlock.h"
 
 @interface UIControl (ALActionBlocks)
 
