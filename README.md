@@ -9,7 +9,7 @@ ALActionBlocks is an Objective-C category on UIControl and UIBarButtonItem that 
 
 This category was inspired by [Dave DeLong] (https://github.com/davedelong)'s StackOverflow [answer] (http://stackoverflow.com/a/4582061/315074).
 
-#### UIButton Example
+#### Simple Example
 
 ```objc
 // Assuming you have a UIButton named 'button'
