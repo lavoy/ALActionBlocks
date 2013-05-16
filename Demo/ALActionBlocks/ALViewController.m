@@ -20,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"ALActionBlocks";
+    
     self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.button.frame = CGRectMake(60, 44, 200, 44);
     [self.button setTitle:@"Start" forState:UIControlStateNormal];
@@ -45,6 +48,8 @@
         }
     }];
     [self.view addSubview:segmentedControl];
+    
+    
 }
 
 

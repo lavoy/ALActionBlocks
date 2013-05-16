@@ -17,8 +17,6 @@
 		A1AE07D5170741AC0028A95E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07D4170741AC0028A95E /* Default@2x.png */; };
 		A1AE07D7170741AC0028A95E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07D6170741AC0028A95E /* Default-568h@2x.png */; };
 		A1AE07DA170741AC0028A95E /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AE07D9170741AC0028A95E /* ALViewController.m */; };
-		A1AE07DD170741AC0028A95E /* ALViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07DB170741AC0028A95E /* ALViewController_iPhone.xib */; };
-		A1AE07E0170741AC0028A95E /* ALViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07DE170741AC0028A95E /* ALViewController_iPad.xib */; };
 		A1F120D11733050400363A8F /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F120D01733050400363A8F /* UIControl+ALActionBlocks.m */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +36,6 @@
 		A1AE07D6170741AC0028A95E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A1AE07D8170741AC0028A95E /* ALViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALViewController.h; sourceTree = "<group>"; };
 		A1AE07D9170741AC0028A95E /* ALViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
-		A1AE07DC170741AC0028A95E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ALViewController_iPhone.xib; sourceTree = "<group>"; };
-		A1AE07DF170741AC0028A95E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ALViewController_iPad.xib; sourceTree = "<group>"; };
 		A1F120CF1733050400363A8F /* UIControl+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ALActionBlocks.h"; sourceTree = "<group>"; };
 		A1F120D01733050400363A8F /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
 		A1F120D21733052200363A8F /* ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlocks.h; sourceTree = "<group>"; };
@@ -93,8 +89,6 @@
 				A1AE07D0170741AC0028A95E /* ALAppDelegate.m */,
 				A1AE07D8170741AC0028A95E /* ALViewController.h */,
 				A1AE07D9170741AC0028A95E /* ALViewController.m */,
-				A1AE07DB170741AC0028A95E /* ALViewController_iPhone.xib */,
-				A1AE07DE170741AC0028A95E /* ALViewController_iPad.xib */,
 				A1F120CE1733050400363A8F /* ALActionBlocks */,
 				A1AE07C7170741AC0028A95E /* Supporting Files */,
 			);
@@ -182,8 +176,6 @@
 				A1AE07D3170741AC0028A95E /* Default.png in Resources */,
 				A1AE07D5170741AC0028A95E /* Default@2x.png in Resources */,
 				A1AE07D7170741AC0028A95E /* Default-568h@2x.png in Resources */,
-				A1AE07DD170741AC0028A95E /* ALViewController_iPhone.xib in Resources */,
-				A1AE07E0170741AC0028A95E /* ALViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,22 +202,6 @@
 				A1AE07CA170741AC0028A95E /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A1AE07DB170741AC0028A95E /* ALViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1AE07DC170741AC0028A95E /* en */,
-			);
-			name = ALViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		A1AE07DE170741AC0028A95E /* ALViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1AE07DF170741AC0028A95E /* en */,
-			);
-			name = ALViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -296,6 +272,7 @@
 				GCC_PREFIX_HEADER = "ALActionBlocks/ALActionBlocks-Prefix.pch";
 				INFOPLIST_FILE = "ALActionBlocks/ALActionBlocks-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -307,6 +284,7 @@
 				GCC_PREFIX_HEADER = "ALActionBlocks/ALActionBlocks-Prefix.pch";
 				INFOPLIST_FILE = "ALActionBlocks/ALActionBlocks-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

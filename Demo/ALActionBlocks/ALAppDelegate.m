@@ -7,21 +7,24 @@
 //
 
 #import "ALAppDelegate.h"
-
 #import "ALViewController.h"
+
+@interface ALAppDelegate ()
+
+@property (strong, nonatomic) UINavigationController *navController;
+
+@end
 
 @implementation ALAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ALViewController alloc] initWithNibName:@"ALViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ALViewController alloc] initWithNibName:@"ALViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+    
+    ALViewController *viewController = [[ALViewController alloc] init];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     return YES;
 }
