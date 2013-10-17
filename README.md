@@ -1,11 +1,11 @@
 # ALActionBlocks
 
-ALActionBlocks is an Objective-C category on UIControl and UIBarButtonItem that allows for handling of control events with blocks.
+ALActionBlocks is an Objective-C category on UIControl, UIBarButtonItem, and UIGestureRecognizer that allows for handling of control events with blocks.
 
 - Handle control events with blocks
 - Remove blocks for control events
 - Gives you a weak reference to your control in the block
-- Works with all of your existing subclasses of UIControl & UIBarButtonItem
+- Works with all of your existing subclasses of UIControl, UIBarButtonItem, and UIGestureRecognizer
 
 This category was inspired by [Dave DeLong] (https://github.com/davedelong)'s StackOverflow [answer] (http://stackoverflow.com/a/4582061/315074).
 
