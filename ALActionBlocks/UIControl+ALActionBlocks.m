@@ -13,7 +13,6 @@
 
 @implementation UIControl (ALActionBlocks)
 
-static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
 
 - (void)handleControlEvents:(UIControlEvents)controlEvents withBlock:(ALActionBlock)actionBlock {
     NSMutableArray *actionBlocksArray = [self actionBlocksArray];

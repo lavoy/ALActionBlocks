@@ -19,6 +19,7 @@
 		A1AE07D5170741AC0028A95E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07D4170741AC0028A95E /* Default@2x.png */; };
 		A1AE07D7170741AC0028A95E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1AE07D6170741AC0028A95E /* Default-568h@2x.png */; };
 		A1AE07DA170741AC0028A95E /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AE07D9170741AC0028A95E /* ALViewController.m */; };
+		A1C48A15181060B500734781 /* UIGestureRecognizer+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C48A14181060B500734781 /* UIGestureRecognizer+ALActionBlocks.m */; };
 		A1F120D11733050400363A8F /* UIControl+ALActionBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F120D01733050400363A8F /* UIControl+ALActionBlocks.m */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		A1AE07D6170741AC0028A95E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A1AE07D8170741AC0028A95E /* ALViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALViewController.h; sourceTree = "<group>"; };
 		A1AE07D9170741AC0028A95E /* ALViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
+		A1C48A13181060B500734781 /* UIGestureRecognizer+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+ALActionBlocks.h"; sourceTree = "<group>"; };
+		A1C48A14181060B500734781 /* UIGestureRecognizer+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+ALActionBlocks.m"; sourceTree = "<group>"; };
 		A1F120CF1733050400363A8F /* UIControl+ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ALActionBlocks.h"; sourceTree = "<group>"; };
 		A1F120D01733050400363A8F /* UIControl+ALActionBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ALActionBlocks.m"; sourceTree = "<group>"; };
 		A1F120D21733052200363A8F /* ALActionBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALActionBlocks.h; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				A10AE4811745784800EEC209 /* UIBarButtonItem+ALActionBlocks.m */,
 				A1F120CF1733050400363A8F /* UIControl+ALActionBlocks.h */,
 				A1F120D01733050400363A8F /* UIControl+ALActionBlocks.m */,
+				A1C48A13181060B500734781 /* UIGestureRecognizer+ALActionBlocks.h */,
+				A1C48A14181060B500734781 /* UIGestureRecognizer+ALActionBlocks.m */,
 			);
 			name = ALActionBlocks;
 			path = ../../ALActionBlocks;
@@ -199,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1AE07CD170741AC0028A95E /* main.m in Sources */,
+				A1C48A15181060B500734781 /* UIGestureRecognizer+ALActionBlocks.m in Sources */,
 				A1AE07D1170741AC0028A95E /* ALAppDelegate.m in Sources */,
 				A1AE07DA170741AC0028A95E /* ALViewController.m in Sources */,
 				A1F120D11733050400363A8F /* UIControl+ALActionBlocks.m in Sources */,

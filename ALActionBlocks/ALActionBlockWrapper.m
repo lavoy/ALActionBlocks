@@ -11,6 +11,7 @@
 
 @implementation ALActionBlockWrapper
 
+
 - (void)invokeBlock:(id)sender {
     if (self.actionBlock) {
         self.actionBlock(sender);

@@ -39,7 +39,6 @@
     
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"One", @"Two", @"Three"]];
     segmentedControl.frame = CGRectMake(88, 220 + 64, 143, 30);
-    segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
     [segmentedControl handleControlEvents:UIControlEventValueChanged withBlock:^(id weakControl) {
         NSLog(@"selected segment: %@", [segmentedControl titleForSegmentAtIndex:segmentedControl.selectedSegmentIndex]);
         if (segmentedControl.selectedSegmentIndex == 2) {
@@ -65,6 +64,12 @@
         NSLog(@"pow!");
     }];
     [toolbar setItems:@[powButton]];
+    
+    __weak ALViewController *wSelf = self;
+    UIPanGestureRecognizer *gr = [[UIPanGestureRecognizer alloc] initWithBlock:^(UIPanGestureRecognizer *weakGR) {
+        NSLog(@"pan %@", NSStringFromCGPoint([weakGR locationInView:wSelf.view]));
+    }];
+    [self.view addGestureRecognizer:gr];
 }
 
 @end

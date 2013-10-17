@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ALActionBlock.h"
 
+static NSString *const ALActionBlocksArray = @"ALActionBlocksArray";
+
 @interface ALActionBlockWrapper : NSObject
 
 @property (nonatomic, copy) ALActionBlock actionBlock;
