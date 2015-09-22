@@ -15,32 +15,47 @@
 
 
 - (instancetype)initWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem block:(ALActionBlock)actionBlock {
-    UIBarButtonItem *barButtonItem = [[[self class] alloc] initWithBarButtonSystemItem:systemItem target:nil action:nil];
-    [barButtonItem setBlock:actionBlock];
-    return barButtonItem;
+    
+    self = [self initWithBarButtonSystemItem:systemItem target:nil action:nil];
+    if (self) {
+        [self setBlock:actionBlock];
+    }
+    
+    return self;
 }
 
 
 - (instancetype)initWithImage:(UIImage *)image landscapeImagePhone:(UIImage *)landscapeImagePhone style:(UIBarButtonItemStyle)style block:(ALActionBlock)actionBlock {
-    UIBarButtonItem *barButtonItem = [[[self class] alloc] initWithImage:image landscapeImagePhone:landscapeImagePhone style:style target:nil action:nil];
-    [barButtonItem setBlock:actionBlock];
-    return barButtonItem;
+    
+    self = [self initWithImage:image landscapeImagePhone:landscapeImagePhone style:style target:nil action:nil];
+    if (self) {
+        [self setBlock:actionBlock];
+    }
+    
+    return self;
 }
 
 
 - (instancetype)initWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style block:(ALActionBlock)actionBlock {
-    UIBarButtonItem *barButtonItem = [[[self class] alloc] initWithImage:image style:style target:nil action:nil];
-    [barButtonItem setBlock:actionBlock];
-    return barButtonItem;
+    
+    self = [self initWithImage:image style:style target:nil action:nil];
+    if (self) {
+        [self setBlock:actionBlock];
+    }
+    
+    return self;
 }
 
 
 - (instancetype)initWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style block:(ALActionBlock)actionBlock {
-    UIBarButtonItem *barButtonItem = [[[self class] alloc] initWithTitle:title style:style target:nil action:nil];
-    [barButtonItem setBlock:actionBlock];
-    return barButtonItem;
+    
+    self = [self initWithTitle:title style:style target:nil action:nil];
+    if (self) {
+        [self setBlock:actionBlock];
+    }
+    
+    return self;
 }
-
 
 - (void)setBlock:(ALActionBlock)actionBlock {
     NSMutableArray *actionBlocksArray = [self actionBlocksArray];
