@@ -23,19 +23,27 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"ALActionBlocks";
     
+    
+    
     self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.button.frame = CGRectMake(60, 44 + 64, 200, 44);
     [self.button setTitle:@"Start" forState:UIControlStateNormal];
     [self.button handleControlEvents:UIControlEventTouchUpInside withBlock:^(UIButton *weakButton) {
         NSLog(@"buttton pressed: %@", [weakButton titleForState:UIControlStateNormal]);
+        
     }];
     [self.view addSubview:self.button];
     
     UISwitch *aSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(120, 132 + 64, 0, 0)];
     [aSwitch handleControlEvents:UIControlEventValueChanged withBlock:^(id weakControl) {
         NSLog(@"value: %d", aSwitch.isOn);
+        
+        
+        
     }];
     [self.view addSubview:aSwitch];
+    
+    
     
     UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"One", @"Two", @"Three"]];
     segmentedControl.frame = CGRectMake(88, 220 + 64, 143, 30);
